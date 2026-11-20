@@ -75,14 +75,14 @@ jobs:
           merge-multiple: true
       - name: Render formula
         run: scripts/render-formula.sh "${GITHUB_REF_NAME#v}" dist > buzz-backend-docker.rb
-      - name: Push to abipalli/homebrew-tap
+      - name: Push to Mambattu/homebrew-tap
         env:
           TAP_DEPLOY_KEY: ${{ secrets.TAP_DEPLOY_KEY }}
         run: |
           install -m 600 /dev/null "$RUNNER_TEMP/tap_key"
           printf '%s\n' "$TAP_DEPLOY_KEY" > "$RUNNER_TEMP/tap_key"
           export GIT_SSH_COMMAND="ssh -i $RUNNER_TEMP/tap_key -o IdentitiesOnly=yes -o StrictHostKeyChecking=accept-new"
-          git clone git@github.com:abipalli/homebrew-tap.git tap
+          git clone git@github.com:Mambattu/homebrew-tap.git tap
           mkdir -p tap/Formula
           cp buzz-backend-docker.rb tap/Formula/
           cd tap
@@ -96,6 +96,6 @@ jobs:
     needs: tap
     runs-on: macos-14
     steps:
-      - run: brew install abipalli/tap/buzz-backend-docker
+      - run: brew install mambattu/tap/buzz-backend-docker
       - run: brew test buzz-backend-docker
       - run: echo '{"op":"info"}' | buzz-backend-docker | grep '"protocol_version":1'

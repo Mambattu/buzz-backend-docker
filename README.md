@@ -18,7 +18,7 @@ internet. With that in place (`ssh agents` works and the server user can run
 `docker`), on the Mac that runs Buzz Desktop:
 
 ```sh
-brew install abipalli/tap/buzz-backend-docker
+brew install mambattu/tap/buzz-backend-docker
 buzz-backend-docker setup ssh://agents
 ```
 
@@ -127,7 +127,7 @@ cargo clippy --all-targets -- -D warnings
 Releases: bump `version` in `Cargo.toml`, then push a matching tag
 (`git tag v0.2.0 && git push --tags`). CI builds macOS and Linux binaries,
 publishes the GitHub release, updates the
-[Homebrew tap](https://github.com/abipalli/homebrew-tap), and installs it on a
+[Homebrew tap](https://github.com/Mambattu/homebrew-tap), and installs it on a
 macOS runner to check.
 
 ## License
