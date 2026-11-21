@@ -3,7 +3,7 @@
 set -eu
 version=$1
 dist=$2
-base="https://github.com/abipalli/buzz-backend-docker/releases/download/v$version"
+base="https://github.com/Mambattu/buzz-backend-docker/releases/download/v$version"
 
 asset() {
   name="buzz-backend-docker-v$version-$1.tar.gz"
@@ -14,7 +14,7 @@ asset() {
 cat <<FORMULA
 class BuzzBackendDocker < Formula
   desc "Run Buzz agents on your own server: remote-agent backend for any Docker host"
-  homepage "https://github.com/abipalli/buzz-backend-docker"
+  homepage "https://github.com/Mambattu/buzz-backend-docker"
   version "$version"
   license "Apache-2.0"
 

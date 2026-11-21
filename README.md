@@ -11,7 +11,7 @@ you see it online, you mention it to work with it, and `!shutdown` stops it.
 
 ## Quick start
 
-**Recommended:** follow the [setup guide](https://github.com/abipalli/buzz-backend-docker/wiki/Recommended-setup).
+**Recommended:** follow the [setup guide](https://github.com/Mambattu/buzz-backend-docker/wiki/Recommended-setup).
 It connects your Mac and server over [Tailscale](https://tailscale.com) and
 gives the server a short SSH profile name, so nothing is exposed to the
 internet. With that in place (`ssh agents` works and the server user can run
@@ -28,9 +28,9 @@ the server answers. Then in Buzz Desktop, open an agent's settings, choose the
 
 Any `ssh://user@host[:port]` works too; the profile just keeps keys, ports and
 connection reuse in `~/.ssh/config`. The wiki also covers
-[exposing the relay](https://github.com/abipalli/buzz-backend-docker/wiki/Exposing-the-relay)
+[exposing the relay](https://github.com/Mambattu/buzz-backend-docker/wiki/Exposing-the-relay)
 with Tailscale Serve or Traefik, and
-[troubleshooting](https://github.com/abipalli/buzz-backend-docker/wiki/Troubleshooting).
+[troubleshooting](https://github.com/Mambattu/buzz-backend-docker/wiki/Troubleshooting).
 
 ## Settings
 

@@ -5,7 +5,7 @@ edition = "2021"
 rust-version = "1.85"
 license = "Apache-2.0"
 description = "Buzz remote-agent backend provider that runs agents as containers on a Docker host"
-repository = "https://github.com/abipalli/buzz-backend-docker"
+repository = "https://github.com/Mambattu/buzz-backend-docker"
 keywords = ["buzz", "nostr", "agents", "docker"]
 categories = ["command-line-utilities"]
 
